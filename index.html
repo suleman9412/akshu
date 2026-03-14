@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Kiddu 🌷</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600;700&family=Noto+Serif+Devanagari:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===== LOADING SCREEN ===== -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-petals">
+        <span>🌷</span><span>🌷</span><span>🌷</span>
+      </div>
+      <div class="loader-text">Kuch khaas aa raha hai...</div>
+      <div class="loader-subtext">tumhare liye 💗</div>
+      <div class="loader-progress">
+        <div class="loader-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MUSIC CONTROL ===== -->
+  <div id="music-btn" onclick="toggleMusic()">
+    <span id="music-icon">🎵</span>
+    <span id="music-label">Play Music</span>
+  </div>
+  <audio id="bgMusic" loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- ===== FLOATING ELEMENTS ===== -->
+  <div class="floating-elements" id="floatingElements"></div>
+
+  <!-- ===== SECTION 1: HERO / BIRTHDAY WISH ===== -->
+  <section id="hero" class="section hero-section">
+    <div class="stars-bg"></div>
+    <div class="hero-content">
+      <div class="birthday-badge">15 March 🎂</div>
+      <h1 class="hero-title">
+        <span class="title-small">Happy Birthday</span>
+        <span class="title-big">Kiddu</span>
+        <span class="title-emoji">🌷</span>
+      </h1>
+      <p class="hero-subtitle">Aksha Choudhary</p>
+      <div class="hero-message">
+        <p>Aaj teri roshni ka din hai, chaandni ka festVal hai<br>
+          Tujhe duniya ka sabse acha din mubarak ho 💗</p>
+
+        <div class="voice-note-player" onclick="toggleVoiceNote()">
+          <span class="vn-icon" id="vn-icon">▶️</span>
+          <span class="vn-text" id="vn-text">Play My Voice Message</span>
+        </div>
+        <audio id="voiceNote">
+          <source src="voice-note.ogg" type="audio/ogg">
+        </audio>
+      </div>
+
+      <div class="time-together" id="timeTogether">
+        <p>Saath chalte hue:</p>
+        <div class="time-boxes">
+          <div class="t-box"><span id="t-days">0</span><br><small>Days</small></div>
+          <div class="t-box"><span id="t-hours">0</span><br><small>Hours</small></div>
+          <div class="t-box"><span id="t-mins">0</span><br><small>Mins</small></div>
+          <div class="t-box"><span id="t-secs">0</span><br><small>Secs</small></div>
+        </div>
+      </div>
+
+      <div class="scroll-hint">
+        <span>Scroll karo apni kahani dekhne ke liye</span>
+        <div class="scroll-arrow">↓</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 2: OUR STORY ===== -->
+  <section id="story" class="section story-section">
+    <div class="section-header">
+      <h2 class="section-title">Humari Kahani</h2>
+      <p class="section-sub">Ek "Hello" se shuru hoi jo ab tak chal rahi hai ✨</p>
+    </div>
+    <div class="story-timeline">
+
+      <div class="timeline-item" data-aos="fade-right">
+        <div class="timeline-icon">👋</div>
+        <div class="timeline-card">
+          <div class="timeline-date">May 2025</div>
+          <h3>Pehli Baat</h3>
+          <p>Ek simple "Hello" ne sab kuch shuru kar diya. Tu ne "H" likha aur meri duniya badal gayi 😄</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right" data-aos="fade-left">
+        <div class="timeline-icon">🎥</div>
+        <div class="timeline-card">
+          <div class="timeline-date">September 2025</div>
+          <h3>Content Creator Kiddu</h3>
+          <p>Tu ne YouTube shuru kiya — @i_akshubby — aur mujhe teri confidence dekh ke sach mein proud feel hua.
+            "Subscribe krado yrr!" 🌷</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-right">
+        <div class="timeline-icon">🌧️</div>
+        <div class="timeline-card">
+          <div class="timeline-date">October 7, 2025</div>
+          <h3>Baarish Wali Raat</h3>
+          <p>Main barish mein 30 minute khada raha… bas teri ek smile ke liye 🌧️<br>
+            Mummy ne daant padi… but "worth it tha" — teri smile ke liye toh hmesha hoga 💗</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right" data-aos="fade-left">
+        <div class="timeline-icon">🍝</div>
+        <div class="timeline-card">
+          <div class="timeline-date">October 2025</div>
+          <h3>White Sauce Pasta Chronicles</h3>
+          <p>Tujhe sirf white sauce pasta pasand hai — aur jab bhi sad hoti hai tab bhi pasta hi yaad aata hai 😂 Momos,
+            pizza, brownies… sab tere liye! (Onion nahi daalte, yaad hai 😉)</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-right">
+        <div class="timeline-icon">🌷</div>
+        <div class="timeline-card">
+          <div class="timeline-date">October 22, 2025</div>
+          <h3>Tulip Moment</h3>
+          <p>"Rose nahi chahiye… Tulip 🌷 achhe lagte hain" — aur tab se tere liye sirf tulips hi hain 🌷🌷🌷🌷🌷🌷</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right" data-aos="fade-left">
+        <div class="timeline-icon">😼</div>
+        <div class="timeline-card">
+          <div class="timeline-date">Aaj Bhi</div>
+          <h3>Kiddu Returns 😼</h3>
+          <p>"Abhi m ak kiddo hu 😼🤌🏻" — ye line tune khud boli thi… aur tab se tu hamari zindagi ki sabse pyaari
+            'Kiddu' hai hamesha ke liye 💗</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3: PHOTO GALLERY ===== -->
+  <section id="gallery" class="section gallery-section">
+    <div class="section-header">
+      <h2 class="section-title">Teri Duniya</h2>
+      <p class="section-sub">Har photo mein ek naya rang hai 💗</p>
+    </div>
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- JS will populate this -->
+    </div>
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <span class="lightbox-close">✕</span>
+      <img id="lightboxImg" src="" alt="Aksha" />
+      <div class="lightbox-nav">
+        <button onclick="event.stopPropagation(); prevImage()">‹</button>
+        <button onclick="event.stopPropagation(); nextImage()">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 4: THINGS ABOUT KIDDU ===== -->
+  <section id="about" class="section about-section">
+    <div class="section-header">
+      <h2 class="section-title">Kiddu Ka Universe 🌍</h2>
+      <p class="section-sub">Ye sab tere baare mein likha hai, kyunki tu unique hai</p>
+    </div>
+    <div class="cards-grid">
+
+      <div class="fact-card" data-aos="zoom-in">
+        <div class="card-emoji">🏅</div>
+        <h3>4 Dance Medals</h3>
+        <p>School mein 4 gold medals dance mein! Talent + confidence = Kiddu 💃</p>
+      </div>
+
+      <div class="fact-card" data-aos="zoom-in">
+        <div class="card-emoji">🏏</div>
+        <h3>Kho-Kho & Badminton</h3>
+        <p>Sports queen bhi hai tu — while I'm just watching reels 😅</p>
+      </div>
+
+      <div class="fact-card" data-aos="zoom-in">
+        <div class="card-emoji">🎥</div>
+        <h3>Content Creator</h3>
+        <p>YouTube pe @i_akshubby — teri confidence ne tujhe star banaya hai ⭐</p>
+      </div>
+
+      <div class="fact-card" data-aos="zoom-in">
+        <div class="card-emoji">🍝</div>
+        <h3>White Sauce Pasta Lover</h3>
+        <p>Koi bhi mood ho — pasta fix hai. Aur haan, onion nahi 😂</p>
+      </div>
+
+      <div class="fact-card" data-aos="zoom-in">
+        <div class="card-emoji">🌷</div>
+        <h3>Tulip Wali Ladki</h3>
+        <p>Rose nahi — sirf Tulips. Ekdum original choice, teri tarah! 🌷</p>
+      </div>
+
+      <div class="fact-card" data-aos="zoom-in">
+        <div class="card-emoji">🕌</div>
+        <h3>Dream Destination: Makkah</h3>
+        <p>Sabse pehle Makkah — uske baad Dubai 🌇 Insha'Allah hai tere liye ✨</p>
+      </div>
+
+      <div class="fact-card" data-aos="zoom-in">
+        <div class="card-emoji">⛰️</div>
+        <h3>Mountain Views</h3>
+        <p>Pahadon ki views teri jaan hai — zindagi ki tarah ऊँची udaan 🏔️</p>
+      </div>
+
+      <div class="fact-card" data-aos="zoom-in">
+        <div class="card-emoji">😼</div>
+        <h3>Certified Introvert + Flirt</h3>
+        <p>"WhatsApp pe introvert, samne toh puri flirt" — tumhara hi quote hai bhai 😄</p>
+      </div>
+
+      <div class="fact-card" data-aos="zoom-in">
+        <div class="card-emoji">🌚</div>
+        <h3>Mystery Mode Expert</h3>
+        <p>🌚 emoji aata hai toh samjho planning chal rahi hai secretly 😅</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== SECTION 5: BIRTHDAY LETTER ===== -->
+  <section id="letter" class="section letter-section">
+    <div class="letter-envelope" id="letterEnvelope">
+      <div class="envelope-front" onclick="checkPassword()">
+        <div class="envelope-seal">💌</div>
+        <p>Tap karo kholne ke liye</p>
+      </div>
+    </div>
+
+    <div class="password-modal" id="passwordModal">
+      <h3>Mystery Mode 🌚</h3>
+      <p>Secret password batao (Hint: Tumhe kya pasand hai? 🌷)</p>
+      <input type="text" id="secretPassword" placeholder="Enter password..." />
+      <button onclick="verifyPassword()">Unlock</button>
+      <p id="passwordError" class="error-text"></p>
+    </div>
+
+    <div class="letter-content" id="letterContent">
+      <div class="letter-paper">
+        <div class="letter-header">
+          <span>🌷 15 March, 2026 🌷</span>
+        </div>
+        <h3>Meri Pyaari Kiddu,</h3>
+        <p>
+          Ye sab likha hai sirf tere liye — kyunki tu deserves karta hai ki koi teri taraf se ekdum dil se baat kare.
+        </p>
+        <p>
+          Yaad hai jab tu ne likha था <em>"Abhi m ak kiddo hu 😼🤌🏻"</em>? Tab se tu meri duniya ki sabse original aur
+          special "Kiddu" hai.
+          Teri confidence, teri haasne ki style, tera <em>"Hmm"</em> wala reply, tera dance, tera pasta wala scene —
+          sab kuch ekdum alag hai. Ekdum tere jaisa.
+        </p>
+        <p>
+          Tu 4 dance medals wali hai. Tu kho-kho khailti hai. Tu content creator hai.
+          Tu mountains dekhna chahti hai. Tu Makkah jaana chahti hai.
+          Tu white sauce pasta bina onion ke khati hai 😂
+          Tu tulip pasand karti hai (rose nahi!).
+          Aur haan — tu puri "🌚 mystery mode" mein rehti hai.
+        </p>
+        <p>
+          Mujhe teri zindagi mein ek chhota sa role milne ke liye shukria.
+          <em>Barish mein khada rehna tere liye worth it tha</em> — aur hamesha rahega.
+          Isiliye ye website, ye har photo, ye har word — sirf tere liye hai.
+        </p>
+        <p>
+          Is saal jo bhi ho — padhai, YouTube, dance, mountains —
+          tu himmat se aage badh. Main hoon. Hamesha hoon. 🌷
+        </p>
+        <p class="letter-sign">
+          Tumhara woh dost jo barish mein khada tha,<br>
+          <strong>— Shadab 💗</strong>
+        </p>
+
+        <div class="together-polaroid" data-aos="fade-up">
+          <video src="images/together-video.mp4" autoplay loop muted playsinline></video>
+          <p>Memories 🌟</p>
+        </div>
+
+        <div class="together-polaroid" data-aos="fade-up" style="margin-top: 20px;">
+          <img src="images/together-3.jpeg" alt="Shadab and Kiddu">
+          <p>You my true frnd ❤️🫶🏻</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 7: WISHES / SLIDESHOW ===== -->
+  <section id="wishes" class="section wishes-section">
+    <div class="section-header">
+      <h2 class="section-title">Birthday Duaayein 🤲</h2>
+      <p class="section-sub">Dil se, tere liye</p>
+    </div>
+    <div class="wishes-slider" id="wishesSlider">
+      <div class="wish-slide active">
+        <div class="wish-icon">🌷</div>
+        <p>Har teri khwaish puri ho Insha'Allah,<br>chahe wo Makkah ho, Dubai ho, ya Goa 😄</p>
+      </div>
+      <div class="wish-slide">
+        <div class="wish-icon">🎥</div>
+        <p>Tera YouTube channel 1 million tak pahunche —<br>aur tere har reel pe comment aaye "Kiddu rocks!" 🌟</p>
+      </div>
+      <div class="wish-slide">
+        <div class="wish-icon">💃</div>
+        <p>Teri dance shoes kabhi na ruke —<br>4 to 400 medals ka safar ho tera! 🏅🏅🏅</p>
+      </div>
+      <div class="wish-slide">
+        <div class="wish-icon">⛰️</div>
+        <p>Woh mountain views tujhe mile hamesha —<br>zindagi bhi utni hi ऊँची aur khoobsurat ho 🏔️</p>
+      </div>
+      <div class="wish-slide">
+        <div class="wish-icon">🍝</div>
+        <p>Zindagi mein white sauce pasta ki kami kabhi na ho —<br>bina onion ke, hamesha perfect! 😂💗</p>
+      </div>
+      <div class="wish-slide">
+        <div class="wish-icon">🌷</div>
+        <p>Tu jitni tez hai maze mein —<br>utni hi tez ho zindagi mein! "Hmm" se aage bhi kuch bol kabhi kabhi 😄</p>
+      </div>
+    </div>
+    <div class="slider-dots" id="sliderDots"></div>
+  </section>
+
+  <!-- ===== SECTION 7: BALLOONS FINALE ===== -->
+  <section id="finale" class="section finale-section">
+    <div class="finale-bg"></div>
+    <div class="balloons-container" id="balloonsContainer"></div>
+    <div class="finale-content">
+      <div class="cake-container">
+        <div class="cake-emoji">🎂</div>
+        <div class="candles">
+          <div class="candle">
+            <div class="flame"></div>
+          </div>
+          <div class="candle">
+            <div class="flame"></div>
+          </div>
+          <div class="candle">
+            <div class="flame"></div>
+          </div>
+        </div>
+      </div>
+      <h2 class="finale-title">Happy Birthday</h2>
+      <h1 class="finale-name">Kiddu! 🌷</h1>
+      <p class="finale-message">
+        15 March ko teri paidaish ne duniya ko thoda behtar bana diya 💗<br>
+        <em>Jio hazaaron saal — har pal mast raho!</em>
+      </p>
+      <div class="confetti-btn-wrapper">
+        <button class="confetti-btn" onclick="launchConfetti()">🎉 Celebrate!</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONFETTI CANVAS ===== -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
